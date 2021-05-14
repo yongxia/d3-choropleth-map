@@ -18,30 +18,35 @@
             href="https://www.ers.usda.gov/data-products/county-level-data-sets/download-data.aspx" target="_blank">USDA
             Economic
             Research Service</a></p>
-    <div class="container">
-        <svg id="canvas"></svg>
-        <div class="right-box">
-            <div id="tooltip">county data</div>
-            <svg id="legend">
-                <g>
-                    <rect x="20" y="35" width="30" height="30" style="fill:#eff3ff" />
-                    <text x="60" y="52">&lt=10%</text>
-                </g>
-                <g>
-                    <rect x="20" y="65" width="30" height="30" style="fill:#bdd7e7" />
-                    <text x="60" y="82">&lt=25%</text>
-                </g>
-                <g>
-                    <rect x="20" y="95" width="30" height="30" style="fill:#6baed6" />
-                    <text x="60" y="112">&lt=40%</text>
-                </g>
-                <g>
-                    <rect x="20" y="125" width="30" height="30" style="fill:#2171b5" />
-                    <text x="60" y="142">&gt40%</text>
-                </g>
-            </svg>
-        </div>
-    </div>
+    <p id="tooltip">county data</p>
+    <svg id="canvas">
+        <g id="legend">
+            <rect x="650" y="40" width="40" height="8" style="fill:#eff3ff" />
+            <rect x="690" y="40" width="40" height="8" style="fill:#bdd7e7" />
+            <rect x="730" y="40" width="40" height="8" style="fill:#6baed6" />
+            <rect x="770" y="40" width="40" height="8" style="fill:#2171b5" />
+            <g>
+                <line stroke="#000" x1="650" y1="38" x2="650" y2="52"></line>
+                <text x="650" y="70">3%</text>
+            </g>
+            <g>
+                <line stroke="#000" x1="690" y1="38" x2="690" y2="52"></line>
+                <text x="690" y="70">10%</text>
+            </g>
+            <g>
+                <line stroke="#000" x1="730" y1="38" x2="730" y2="52"></line>
+                <text x="730" y="70">20%</text>
+            </g>
+            <g>
+                <line stroke="#000" x1="770" y1="38" x2="770" y2="52"></line>
+                <text x="770" y="70">40%</text>
+            </g>
+            <g>
+                <line stroke="#000" x1="810" y1="38" x2="810" y2="52"></line>
+                <text x="810" y="70">76%</text>
+            </g>
+        </g>
+    </svg>
     <script src="script.js"></script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>

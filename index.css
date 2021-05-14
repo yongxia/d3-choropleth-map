@@ -5,11 +5,6 @@
 
 body {
     text-align: center;
-    height: 100vh;
-}
-
-.container {
-    display: flex;
 }
 
 svg {
@@ -22,17 +17,13 @@ svg {
 }
 
 .county:hover {
-    fill:orange;
-}
-
-.right-box{
-    padding: 10px 10px 10px 10px;
-}
-
-#legend {
-    margin: auto;
+    fill: orange;
 }
 
 #tooltip {
     visibility: hidden;
+}
+
+a {
+    text-decoration: none;
 }

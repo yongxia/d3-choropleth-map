@@ -44,14 +44,15 @@ drawMap = () => {
 d3.json(CountyUrl).then((data, err) => {
     if (err) return console.error(err);
     countyData = topojson.feature(data, data.objects.counties).features;
-    console.log(countyData);
+    //console.log(countyData);
     return d3.json(UsEducationUrl);
 }).then((data, err) => {
     if (err) return console.error(err);
     educationData = data;
-    console.log(educationData);
+    //console.log(educationData);
     //let min = d3.min(educationData, d => d.bachelorsOrHigher);
     //let max = d3.max(educationData, d => d.bachelorsOrHigher);
+    //console.log(min, max);
     //console.log(d3.schemeBlues[4]);
     //color = d3.scaleOrdinal().domain([min, max]).range(d3.schemeBlues[4]);
     drawMap();
