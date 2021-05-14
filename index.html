@@ -18,26 +18,30 @@
             href="https://www.ers.usda.gov/data-products/county-level-data-sets/download-data.aspx" target="_blank">USDA
             Economic
             Research Service</a></p>
-    <svg id="canvas"></svg>
-    <svg id="legend">
-        <g>
-            <rect x="20" y="35" width="30" height="30" style="fill:orange" />
-            <text x="60" y="52">less than 20</text>
-        </g>
-        <g>
-            <rect x="20" y="65" width="30" height="30" style="fill:lightgreen" />
-            <text x="60" y="82">20 to 35</text>
-        </g>
-        <g>
-            <rect x="20" y="95" width="30" height="30" style="fill:green" />
-            <text x="60" y="112">35 to 50</text>
-        </g>
-        <g>
-            <rect x="20" y="125" width="30" height="30" style="fill:blue" />
-            <text x="60" y="142">great than 50</text>
-        </g>
-    </svg>
-    <div id="tooltip"></div>
+    <div class="container">
+        <svg id="canvas"></svg>
+        <div class="right-box">
+            <div id="tooltip">county data</div>
+            <svg id="legend">
+                <g>
+                    <rect x="20" y="35" width="30" height="30" style="fill:#eff3ff" />
+                    <text x="60" y="52">&lt=10%</text>
+                </g>
+                <g>
+                    <rect x="20" y="65" width="30" height="30" style="fill:#bdd7e7" />
+                    <text x="60" y="82">&lt=25%</text>
+                </g>
+                <g>
+                    <rect x="20" y="95" width="30" height="30" style="fill:#6baed6" />
+                    <text x="60" y="112">&lt=40%</text>
+                </g>
+                <g>
+                    <rect x="20" y="125" width="30" height="30" style="fill:#2171b5" />
+                    <text x="60" y="142">&gt40%</text>
+                </g>
+            </svg>
+        </div>
+    </div>
     <script src="script.js"></script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>

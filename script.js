@@ -3,6 +3,7 @@ const UsEducationUrl = 'https://cdn.freecodecamp.org/testable-projects-fcc/data/
 
 let countyData;
 let educationData;
+//let color;
 
 drawMap = () => {
     d3.select('svg').selectAll('path')
@@ -13,14 +14,15 @@ drawMap = () => {
         .attr('class', 'county')
         .attr('fill', ({ id }) => {
             let { bachelorsOrHigher: percentage } = educationData.find(item => id == item.fips);
-            if (percentage <= 20) {
-                return 'orange';
-            } else if (percentage > 20 && percentage <= 35) {
-                return 'lightgreen';
-            } else if (percentage > 35 && percentage < 50) {
-                return 'green';
-            }
-            return "blue";
+            //return color(percentage);
+            if (percentage > 0 && percentage <= 10)
+                return "#eff3ff";
+            else if (percentage > 10 && percentage <= 25)
+                return "#bdd7e7";
+            else if (percentage > 25 && percentage <= 40)
+                return "#6baed6";
+            else
+                return "#2171b5";
         })
         .attr('data-fips', ({ id }) => id)
         .attr('data-education', ({ id }) => educationData.find(item => item.fips === id).bachelorsOrHigher)
@@ -48,5 +50,9 @@ d3.json(CountyUrl).then((data, err) => {
     if (err) return console.error(err);
     educationData = data;
     console.log(educationData);
+    //let min = d3.min(educationData, d => d.bachelorsOrHigher);
+    //let max = d3.max(educationData, d => d.bachelorsOrHigher);
+    //console.log(d3.schemeBlues[4]);
+    //color = d3.scaleOrdinal().domain([min, max]).range(d3.schemeBlues[4]);
     drawMap();
 })

@@ -8,6 +8,10 @@ body {
     height: 100vh;
 }
 
+.container {
+    display: flex;
+}
+
 svg {
     background-color: var(--main-white);
 }
@@ -17,8 +21,18 @@ svg {
     min-height: 600px;
 }
 
+.county:hover {
+    fill:orange;
+}
+
+.right-box{
+    padding: 10px 10px 10px 10px;
+}
+
+#legend {
+    margin: auto;
+}
+
 #tooltip {
     visibility: hidden;
-    width: 40vw;
-    background-color: yellowgreen;
 }
